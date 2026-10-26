@@ -1,0 +1,27 @@
+# ==========================================
+# AUTOMOTIVE CAN TRACE LOG - TEST SUITE
+# Format: Timestamp | CAN_ID (Hex) | Direction | Frame_Type | DLC | Data Bytes (Hex)
+# ==========================================
+
+# --- SCENARIO 1: Normal Operation ---
+# Steady stream of TRACK_A_0 (ID 0x210) within physical limits and correct timing
+10.000000 210 Rx d 8 0A 10 20 30 40 50 60 01
+10.050000 210 Rx d 8 0B 10 21 30 40 50 60 02
+10.100000 210 Rx d 8 0C 10 22 30 40 50 60 03
+
+# --- SCENARIO 2: Timing Violation (Bus Lag / Drop) ---
+# A large time gap (1.5 seconds later instead of ~50ms) to trigger your validator's timing anomaly rule
+11.600000 210 Rx d 8 0D 10 23 30 40 50 60 04
+
+# --- SCENARIO 3: Out-of-Bounds Signal Value ---
+# Sending extreme byte values that exceed the physical min/max thresholds defined in the DBC for LONG_DIST or REL_SPEED
+11.650000 210 Rx d 8 0E FF FF FF FF FF FF FF FF
+
+# --- SCENARIO 4: Malformed Payload / Broken Data Structure ---
+# Truncated DLC (claiming 8 bytes, but only providing 3 bytes) or random noise bytes that break cantools decoding
+11.700000 123 Rx d 3 AA BB CC
+11.750000 210 Rx d 8 ZZ YY XX WW VV UU TT SS
+
+# --- SCENARIO 5: Unknown CAN ID (Not in DBC) ---
+# An arbitrary ID that doesn't exist in your 33-message database to test your parser's filtering resilience
+11.800000 7FE Rx d 8 11 22 33 44 55 66 77 88
