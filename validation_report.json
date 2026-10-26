@@ -1,0 +1,18 @@
+[
+  {
+    "rule": "TIMING_VIOLATION",
+    "message": "TRACK_A_0",
+    "interval_seconds": 1.5,
+    "threshold": 0.5
+  },
+  {
+    "rule": "OUT_OF_BOUNDS",
+    "message": "TRACK_A_0",
+    "signal": "LONG_DIST",
+    "value": 327.67,
+    "allowed_range": [
+      0,
+      300
+    ]
+  }
+]

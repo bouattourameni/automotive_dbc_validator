@@ -1,0 +1,80 @@
+[
+  {
+    "timestamp": 10.0,
+    "can_id": "0x210",
+    "message": "TRACK_A_0",
+    "signals": {
+      "COUNTER": 10,
+      "LONG_DIST": 20.64,
+      "LAT_DIST": 15.44,
+      "NEW_TRACK": 0,
+      "REL_SPEED": 32.15,
+      "VALID": 0,
+      "CHECKSUM": 1
+    }
+  },
+  {
+    "timestamp": 10.05,
+    "can_id": "0x210",
+    "message": "TRACK_A_0",
+    "signals": {
+      "COUNTER": 11,
+      "LONG_DIST": 20.64,
+      "LAT_DIST": 15.44,
+      "NEW_TRACK": 0,
+      "REL_SPEED": 32.15,
+      "VALID": 0,
+      "CHECKSUM": 2
+    }
+  },
+  {
+    "timestamp": 10.1,
+    "can_id": "0x210",
+    "message": "TRACK_A_0",
+    "signals": {
+      "COUNTER": 12,
+      "LONG_DIST": 20.650000000000002,
+      "LAT_DIST": 15.44,
+      "NEW_TRACK": 0,
+      "REL_SPEED": 32.15,
+      "VALID": 0,
+      "CHECKSUM": 3
+    }
+  },
+  {
+    "timestamp": 11.6,
+    "can_id": "0x210",
+    "message": "TRACK_A_0",
+    "signals": {
+      "COUNTER": 13,
+      "LONG_DIST": 20.650000000000002,
+      "LAT_DIST": 15.44,
+      "NEW_TRACK": 0,
+      "REL_SPEED": 32.15,
+      "VALID": 0,
+      "CHECKSUM": 4
+    }
+  },
+  {
+    "timestamp": 11.65,
+    "can_id": "0x210",
+    "message": "TRACK_A_0",
+    "signals": {
+      "COUNTER": 14,
+      "LONG_DIST": 327.67,
+      "LAT_DIST": -0.04,
+      "NEW_TRACK": 1,
+      "REL_SPEED": -0.025,
+      "VALID": 1,
+      "CHECKSUM": 255
+    }
+  },
+  {
+    "timestamp": 11.7,
+    "can_id": "0x123",
+    "message": "STATUS_MSG",
+    "signals": {
+      "_decode_error": "Wrong data size: 3 instead of 7 bytes"
+    }
+  }
+]
